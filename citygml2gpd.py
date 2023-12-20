@@ -37,7 +37,7 @@ def extractHeightsAndGeometryFromGML(eTree: ET.ElementTree, geoDataFrame: gpd.Ge
     heights = findAllInETree(eTree, ".//{http://www.opengis.net/citygml/building/1.0}measuredHeight")
     if len(heights) == 0: print(f"no height for {gmlID}")
     elif len(heights) > 1: print(f"height on {gmlID} might be lost...") 
-    height = float(heights[0].text)
+    else: height = float(heights[0].text)
 
     roofSurfaces = findAllInETree(eTree, ".//{http://www.opengis.net/citygml/building/1.0}RoofSurface")
     if len(roofSurfaces) == 0: 
