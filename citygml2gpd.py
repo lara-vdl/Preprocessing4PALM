@@ -42,7 +42,7 @@ def extractHeightsAndGeometryFromGML(eTree: ET.ElementTree, geoDataFrame: gpd.Ge
     roofSurfaces = findAllInETree(eTree, ".//{http://www.opengis.net/citygml/building/1.0}RoofSurface")
     if len(roofSurfaces) == 0: 
         print(f"no roofSurfaces for {gmlID}")
-    elif len(roofSurfaces) > 1: 
+    else: 
         for rs in roofSurfaces:
             posLists = findAllInETree(rs, ".//{http://www.opengis.net/gml}posList")
             if len(posLists) == 0:
@@ -64,27 +64,6 @@ def extractHeightsAndGeometryFromGML(eTree: ET.ElementTree, geoDataFrame: gpd.Ge
                         "buildingPart": buildingPart,
                         "geometry": posListToShapelyPolygon(pl.text)
                     })
-    else:
-        posLists = findAllInETree(roofSurfaces[0], ".//{http://www.opengis.net/gml}posList")
-        if len(posLists) == 0:
-            print(f"no geometry for {gmlID}")
-        elif len(posLists) == 1:
-            geoDataFrame = addRowToGeoDataFrame(geoDataFrame, newRow = {
-                "gml_id": gmlID, 
-                "height": height, 
-                "function": function, 
-                "buildingPart": buildingPart,
-                "geometry": posListToShapelyPolygon(posLists[0].text)
-            })
-        else:
-            for pl in posLists:
-                geoDataFrame = addRowToGeoDataFrame(geoDataFrame, newRow = {
-                    "gml_id": gmlID, 
-                    "height": height, 
-                    "function": function, 
-                    "buildingPart": buildingPart,
-                    "geometry": posListToShapelyPolygon(pl.text)
-                })
     
     return geoDataFrame
 
@@ -125,4 +104,4 @@ if __name__ == "__main__":
             for bp in buildingParts:
                 data = extractHeightsAndGeometryFromGML(bp, data, gmlID, function, True)
 
-saveGeoDataFrameAsShape(r"C:\Users\alexa\Documents\GitHub\Preprocessing4PALM\shape\data_new.shp")
+saveGeoDataFrameAsShape(r"C:\Users\alexa\Documents\GitHub\Preprocessing4PALM\shape\data_new.shp", data)
