@@ -96,7 +96,7 @@ if __name__ == "__main__":
         
         if len(functions) == 0: print(f"no function for {gmlID}")
         elif len(functions) > 1: print(f"function on {gmlID} might be lost...") 
-        function = functions[0].text
+        else: function = functions[0].text
 
         if len(buildingParts) == 0:
             data = extractHeightsAndGeometryFromGML(building, data, gmlID, function, False)
