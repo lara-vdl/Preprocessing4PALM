@@ -2,6 +2,8 @@ import xml.etree.ElementTree as ET
 import geopandas as gpd
 from shapely.geometry import Polygon
 import pandas as pd
+import glob
+import os
 
 def parseGml(filePath: str) -> ET.ElementTree:
     """Reads GML File and returns it as an Element Tree."""
@@ -27,8 +29,11 @@ def posListToShapelyPolygon(posList: str) -> Polygon:
 
 def addRowToGeoDataFrame(geoDataFrame: gpd.GeoDataFrame, newRow: dict) -> gpd.GeoDataFrame:
     """Adds a new row to an existing GeoDataFrame."""
-    new_gdf = gpd.GeoDataFrame([newRow], geometry='geometry', crs=geoDataFrame.crs)
-    geoDataFrame = gpd.GeoDataFrame(pd.concat([geoDataFrame, new_gdf], ignore_index=True), crs=geoDataFrame.crs)
+    if geoDataFrame.empty:
+        geoDataFrame = gpd.GeoDataFrame([newRow], geometry='geometry', crs=geoDataFrame.crs)
+    else:
+        new_gdf = gpd.GeoDataFrame([newRow], geometry='geometry', crs=geoDataFrame.crs)
+        geoDataFrame = gpd.GeoDataFrame(pd.concat([geoDataFrame, new_gdf], ignore_index=True), crs=geoDataFrame.crs)
     return geoDataFrame
 
 def extractHeightsAndGeometryFromGML(eTree: ET.ElementTree, geoDataFrame: gpd.GeoDataFrame, gmlID: str, function: str, buildingPart: bool) -> gpd.GeoDataFrame:
@@ -71,37 +76,41 @@ def saveGeoDataFrameAsShape(filePath: str, geoDataFrame: gpd.GeoDataFrame):
     geoDataFrame.to_file(filePath)   
 
 if __name__ == "__main__":
-    filePath = r"C:\Users\alexa\Documents\GitHub\Preprocessing4PALM\LoD2_32_376_5705_1_NW.gml"
-    rootNodeGml = parseGml(filePath)
+    build_path = "/media/lara/2TB SSD/sciebo/Promotion/01_PALM_Evaluation/dev_geodata/buildings/LOD2"
+    filePathList = glob.glob(os.path.join(build_path,'*.gml'))
 
-    data = gpd.GeoDataFrame(
-        columns=["gml_id", "height", "function", "buildingPart"],
-        geometry=[],
-        crs="EPSG:25832",
-    )
+    #filePath = "/media/lara/2TB SSD/sciebo/Promotion/01_PALM_Evaluation/dev_geodata/buildings/LOD2/LoD2_32_376_5706_1_NW.gml"
+    for filePath in filePathList:
+        rootNodeGml = parseGml(filePath)
 
-    buildings = findAllInETree(rootNodeGml, ".//{http://www.opengis.net/citygml/building/1.0}Building")
+        data = gpd.GeoDataFrame(
+            columns=["gml_id", "height", "function", "buildingPart"],
+            geometry=[],
+            crs="EPSG:25832",
+        )
 
-    for building in buildings:
+        buildings = findAllInETree(rootNodeGml, ".//{http://www.opengis.net/citygml/building/1.0}Building")
 
-        gmlID = building.attrib['{http://www.opengis.net/gml}id']
-        function = None
-        height = None
-        buildingPart = None
-        geometry = None
+        for building in buildings:
 
-        buildingParts = findAllInETree(building, ".//{http://www.opengis.net/citygml/building/1.0}BuildingPart")
+            gmlID = building.attrib['{http://www.opengis.net/gml}id']
+            function = None
+            height = None
+            buildingPart = None
+            geometry = None
 
-        functions = findAllInETree(building, ".//{http://www.opengis.net/citygml/building/1.0}function")
-        
-        if len(functions) == 0: print(f"no function for {gmlID}")
-        elif len(functions) > 1: print(f"function on {gmlID} might be lost...") 
-        else: function = functions[0].text
+            buildingParts = findAllInETree(building, ".//{http://www.opengis.net/citygml/building/1.0}BuildingPart")
 
-        if len(buildingParts) == 0:
-            data = extractHeightsAndGeometryFromGML(building, data, gmlID, function, False)
-        else:
-            for bp in buildingParts:
-                data = extractHeightsAndGeometryFromGML(bp, data, gmlID, function, True)
+            functions = findAllInETree(building, ".//{http://www.opengis.net/citygml/building/1.0}function")
+            
+            if len(functions) == 0: print(f"no function for {gmlID}")
+            elif len(functions) > 1: print(f"function on {gmlID} might be lost...") 
+            else: function = functions[0].text
 
-saveGeoDataFrameAsShape(r"C:\Users\alexa\Documents\GitHub\Preprocessing4PALM\shape\data_new.shp", data)
+            if len(buildingParts) == 0:
+                data = extractHeightsAndGeometryFromGML(building, data, gmlID, function, False)
+            else:
+                for bp in buildingParts:
+                    data = extractHeightsAndGeometryFromGML(bp, data, gmlID, function, True)
+
+        saveGeoDataFrameAsShape(os.path.join(build_path,filePath.replace(".gml", ".shp")), data)
