@@ -1,0 +1,12 @@
+ART,Text,soil_type,PALM_text
+0,"Torf, Feinhumus",6,organic
+1,Lehmig-tonig,5,very fine
+2,Tonig-lehmig,5,very fine
+3,Tonig-schluffig,4,fine
+4,Sandig-lehmig,3,Medium-fine
+5,stark lehmig-sandig,3,Medium-fine
+6,Sandig-schluffig,2,medium
+7,Lehmig-sandig,1,coarse
+8,sandig,1,coarse
+9,feinbodenarm,1,coarse
+-9,nodata,3,Medium-fine
