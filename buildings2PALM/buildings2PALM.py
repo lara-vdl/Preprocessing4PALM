@@ -65,6 +65,9 @@ def combine_shapefiles(directory:str, clip_file:str) -> gpd.GeoDataFrame:
     buildings.geometry = buildings.geometry.buffer(0)
     buildings = buildings.clip(clipper)
 
+    # drop all where function is 53001_1800, 53001_1806, 53001_1807, 53001_1808, 53001_1830
+    buildings = buildings[~buildings["function"].isin(["53001_1800", "53001_1806", "53001_1807", "53001_1808", "53001_1830"])]
+    
     return buildings
 
 def rasteriseBuildings(gdf:gpd.GeoDataFrame,column:str,resolution:float,dtype:str,nodata:float,out_path:str) -> None:
