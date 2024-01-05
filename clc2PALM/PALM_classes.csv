@@ -1,0 +1,39 @@
+pavement,vegetation,water,name
+1,,,asphalt/concrete mix
+2,,,asphalt (asphalt concrete)
+3,,,concrete (Portland concrete)
+4,,,sett
+5,,,paving stones
+6,,,cobblestone
+7,,,metal
+8,,,wood
+9,,,gravel
+10,,,fine gravel
+11,,,pebblestone
+12,,,woodchips
+13,,,tartan
+14,,,artificial turf
+15,,,clay
+,1,,bare soil
+,2,,"crops, mixed farming"
+,3,,short grass
+,4,,evergreen needleleaf trees
+,5,,deciduous needleleaf trees
+,6,,evergreen broadleaf trees
+,7,,deciduous broadleaf trees
+,8,,tall grass
+,9,,desert
+,10,,tundra
+,11,,irrigated crops
+,12,,semidesert
+,13,,ice caps and glaciers
+,14,,bogs and marshes
+,15,,evergreen shrubs
+,16,,deciduous shrubs
+,17,,mixed forest/woodland
+,18,,interrupted forest
+,,1,lake
+,,2,river
+,,3,ocean
+,,4,pond
+,,5,fountain
