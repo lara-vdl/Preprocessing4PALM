@@ -13,7 +13,7 @@ outpath = "/media/lara/2TB SSD/sciebo/Promotion/01_PALM_Evaluation/dev_geodata/s
 # define functions
 def rasteriseSoil(gdf:gpd.GeoDataFrame,column:str,resolution:float) -> None:
     '''
-    Rasterises the processed ALKIS dataset with a desired resolution and converts to values to integer
+    Rasterises the processed soil dataset with a desired resolution and converts to values to integer
     '''
     output_raster_path = os.path.join(outpath,f"soil_palm_{column}.tif")
 
@@ -46,6 +46,9 @@ def rasteriseSoil(gdf:gpd.GeoDataFrame,column:str,resolution:float) -> None:
         dst.write(raster, 1)
 
 def translateSoil(clip_file:str, soil_file:str, key_file:str,epsg=25832) -> gpd.GeoDataFrame:
+    '''
+    This function translates the soil data from NRW (BK50) to PALM classes
+    '''
     # read and clip data
     clipper = gpd.read_file(os.path.join(data_path,clip_file))
     soil = gpd.read_file(os.path.join(data_path, soil_file), mask = clipper)

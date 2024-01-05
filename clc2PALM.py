@@ -51,6 +51,9 @@ def rasteriseSurface(gdf:gpd.GeoDataFrame,column:str,resolution:float) -> None:
         dst.write(raster, 1)
 
 def translateCLC(clip_file:str, clc_file:str, key_file:str, layername= "U2018_CLC2018_V2020_20u1",epsg=25832) -> tuple[gpd.GeoDataFrame,gpd.GeoDataFrame]:
+    '''
+    This function translates the CLC data to PALM classes
+    '''
     # read and clip data
     clipper = gpd.read_file(os.path.join(data_path,clip_file))
     clc = gpd.read_file(os.path.join(data_path, clc_file), layer=layername, mask = clipper)
