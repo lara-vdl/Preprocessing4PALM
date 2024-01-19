@@ -30,3 +30,4 @@ Required packages:
 * gdal
 * glob
 * xml.etree.ElementTree
+* rasterstats
