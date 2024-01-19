@@ -31,3 +31,15 @@ Required packages:
 * glob
 * xml.etree.ElementTree
 * rasterstats
+
+## R Packages
+
+R version used for development: 4.3.2
+
+Required packages:
+* lidR
+* raster
+* sf
+* data.table
+* terra
+
