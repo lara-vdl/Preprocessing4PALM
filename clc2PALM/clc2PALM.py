@@ -43,9 +43,6 @@ def rasteriseSurface(gdf:gpd.GeoDataFrame,column:str,resolution:float) -> None:
         ]
         # Rasterize the GeoDataFrame into the new raster
         raster = rasterize(shapes, out_shape=(height, width), transform=transform)
-
-        # 
-        #raster = raster.astype('float32')
         
         # Write the raster data to the output raster
         dst.write(raster, 1)
@@ -90,6 +87,10 @@ clc_palm_named = clc_palm.merge(class_names, on=["pavement","vegetation","water"
 # save shapefile
 clc_palm_named.to_file(os.path.join(outpath,"clc_palm.shp"))
 print("saved shapefile")
+
+# create land_use column from combination of vegetation and water for later use in GEO4PALM
+clc_palm["land_use"] = clc_palm["vegetation"]
+clc_palm["land_use"] = np.where(clc_palm["water"].notna(), clc_palm["water"] + 20, clc_palm["land_use"])
 
 # rasterise 
 rasteriseSurface(clc_palm,"pavement",32.0)
