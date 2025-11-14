@@ -370,5 +370,1690 @@
             "identifySealed":false,
             "overlayRail": false
         }
+    ],
+	"Herne": [
+        {
+            "filename": "HER_fachinformationen_41001_gru.xml",
+            "layername": "AX_Wohnbauflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "HER_fachinformationen_42010_gru.xml",
+            "layername": "AX_Bahnverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "palmMapping":null,
+            "keyTable": "42010_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 9.0,
+                "column": "pavement"
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_42001_gru.xml",
+            "layername": "AX_Strassenverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "palmMapping":null,
+            "keyTable": "42001_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "vegAndPav",
+                "value": 2.0,
+                "column": "pavement"
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "HER_fachinformationen_41002_gru.xml",
+            "layername": "AX_IndustrieUndGewerbeflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+		{
+            "filename": "HER_fachinformationen_41004_gru.xml",
+            "layername": "AX_Bergbaubetrieb",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "HER_fachinformationen_41006_gru.xml",
+            "layername": "AX_FlaecheGemischterNutzung",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41006_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 3.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "HER_fachinformationen_41007_gru.xml",
+            "layername": "AX_FlaecheBesondererFunktionalerPraegung",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41007_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 3.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "HER_fachinformationen_41003_gru.xml",
+            "layername": "AX_Halde",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 3.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_41009_gru.xml",
+            "layername": "AX_Friedhof",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 8.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_41008_gru.xml",
+            "layername": "AX_SportFreizeitUndErholungsflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41008_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "vegAndPav",
+                "value": 8.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":true,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_42006_gru.xml",
+            "layername": "AX_Weg",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "42006_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 2.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "HER_fachinformationen_42009_gru.xml",
+            "layername": "AX_Platz",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "42009_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 4.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+		{
+            "filename": "HER_fachinformationen_42016_gru.xml",
+            "layername": "AX_Schiffsverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_43001_gru.xml",
+            "layername": "AX_Landwirtschaft",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43001_PALM.csv",
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "veg",
+                "value": 2.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_43002_gru.xml",
+            "layername": "AX_Wald",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43002_PALM.csv",
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "veg",
+                "value": 7.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_43003_gru.xml",
+            "layername": "AX_Gehoelz",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 7.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_43006_gru.xml",
+            "layername": "AX_Sumpf",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 14.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_43007_gru.xml",
+            "layername": "AX_UnlandVegetationsloseFlaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43007_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 8.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_44001_gru.xml",
+            "layername": "AX_Fliessgewaesser",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 2.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+		{
+            "filename": "HER_fachinformationen_44005_gru.xml",
+            "layername": "AX_Hafenbecken",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 2.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "HER_fachinformationen_44006_gru.xml",
+            "layername": "AX_StehendesGewaesser",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 1.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        }
+    ],
+    "Dortmund": [
+        {
+            "filename": "DO_fachinformationen_41001_gru.xml",
+            "layername": "AX_Wohnbauflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "DO_fachinformationen_42010_gru.xml",
+            "layername": "AX_Bahnverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "palmMapping":null,
+            "keyTable": "42010_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 9.0,
+                "column": "pavement"
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_42001_gru.xml",
+            "layername": "AX_Strassenverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "palmMapping":null,
+            "keyTable": "42001_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "vegAndPav",
+                "value": 2.0,
+                "column": "pavement"
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "DO_fachinformationen_41002_gru.xml",
+            "layername": "AX_IndustrieUndGewerbeflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "DO_fachinformationen_41006_gru.xml",
+            "layername": "AX_FlaecheGemischterNutzung",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41006_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 3.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "DO_fachinformationen_41007_gru.xml",
+            "layername": "AX_FlaecheBesondererFunktionalerPraegung",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41007_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 3.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "DO_fachinformationen_41003_gru.xml",
+            "layername": "AX_Halde",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 3.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_41005_gru.xml",
+            "layername": "AX_TagebauGrubeSteinbruch",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 1.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_41009_gru.xml",
+            "layername": "AX_Friedhof",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 8.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_41008_gru.xml",
+            "layername": "AX_SportFreizeitUndErholungsflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41008_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "vegAndPav",
+                "value": 8.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":true,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_42006_gru.xml",
+            "layername": "AX_Weg",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "42006_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 2.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "DO_fachinformationen_42009_gru.xml",
+            "layername": "AX_Platz",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "42009_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 4.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "DO_fachinformationen_42015_gru.xml",
+            "layername": "AX_Flugverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 1.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_42016_gru.xml",
+            "layername": "AX_Schiffsverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_43001_gru.xml",
+            "layername": "AX_Landwirtschaft",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43001_PALM.csv",
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "veg",
+                "value": 2.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_43002_gru.xml",
+            "layername": "AX_Wald",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43002_PALM.csv",
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "veg",
+                "value": 7.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_43003_gru.xml",
+            "layername": "AX_Gehoelz",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 7.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_43005_gru.xml",
+            "layername": "AX_Moor",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 14.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_43006_gru.xml",
+            "layername": "AX_Sumpf",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 14.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_43007_gru.xml",
+            "layername": "AX_UnlandVegetationsloseFlaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43007_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 8.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_44001_gru.xml",
+            "layername": "AX_Fliessgewaesser",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 2.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_44005_gru.xml",
+            "layername": "AX_Hafenbecken",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 2.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "DO_fachinformationen_44006_gru.xml",
+            "layername": "AX_StehendesGewaesser",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 1.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        }
+    ],
+    "Koeln": [
+        {
+            "filename": "K_fachinformationen_41001_gru.xml",
+            "layername": "AX_Wohnbauflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "K_fachinformationen_42010_gru.xml",
+            "layername": "AX_Bahnverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "palmMapping":null,
+            "keyTable": "42010_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 9.0,
+                "column": "pavement"
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_42001_gru.xml",
+            "layername": "AX_Strassenverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "palmMapping":null,
+            "keyTable": "42001_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "vegAndPav",
+                "value": 2.0,
+                "column": "pavement"
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "K_fachinformationen_41002_gru.xml",
+            "layername": "AX_IndustrieUndGewerbeflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "K_fachinformationen_41006_gru.xml",
+            "layername": "AX_FlaecheGemischterNutzung",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41006_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 3.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "K_fachinformationen_41007_gru.xml",
+            "layername": "AX_FlaecheBesondererFunktionalerPraegung",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41007_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 3.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "K_fachinformationen_41003_gru.xml",
+            "layername": "AX_Halde",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 3.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_41005_gru.xml",
+            "layername": "AX_TagebauGrubeSteinbruch",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 1.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_41009_gru.xml",
+            "layername": "AX_Friedhof",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 8.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_41008_gru.xml",
+            "layername": "AX_SportFreizeitUndErholungsflaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41008_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "vegAndPav",
+                "value": 8.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":true,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_42006_gru.xml",
+            "layername": "AX_Weg",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "42006_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 2.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "K_fachinformationen_42009_gru.xml",
+            "layername": "AX_Platz",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "42009_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 4.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "filename": "K_fachinformationen_42015_gru.xml",
+            "layername": "AX_Flugverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 1.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_42016_gru.xml",
+            "layername": "AX_Schiffsverkehr",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_43001_gru.xml",
+            "layername": "AX_Landwirtschaft",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43001_PALM.csv",
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "veg",
+                "value": 2.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_43002_gru.xml",
+            "layername": "AX_Wald",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43002_PALM.csv",
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "veg",
+                "value": 7.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_43003_gru.xml",
+            "layername": "AX_Gehoelz",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 7.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+		{
+            "filename": "K_fachinformationen_43004_gru.xml",
+            "layername": "AX_Heide",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 15.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_43006_gru.xml",
+            "layername": "AX_Sumpf",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 14.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_43007_gru.xml",
+            "layername": "AX_UnlandVegetationsloseFlaeche",
+            "clippedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43007_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 8.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_44001_gru.xml",
+            "layername": "AX_Fliessgewaesser",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 2.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_44005_gru.xml",
+            "layername": "AX_Hafenbecken",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 2.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "filename": "K_fachinformationen_44006_gru.xml",
+            "layername": "AX_StehendesGewaesser",
+            "clippedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 1.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        }
+    ],
+	"Berlin": [
+        {
+            "layername": "AX_Wohnbauflaeche",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "layername": "AX_Bahnverkehr",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "palmMapping":null,
+            "keyTable": "42010_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 9.0,
+                "column": "pavement"
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Strassenverkehr",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "palmMapping":null,
+            "keyTable": "42001_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "vegAndPav",
+                "value": 2.0,
+                "column": "pavement"
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "layername": "AX_IndustrieUndGewerbeflaeche",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "layername": "AX_FlaecheGemischterNutzung",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41006_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 3.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "layername": "AX_FlaecheBesondererFunktionalerPraegung",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41007_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 3.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "layername": "AX_Halde",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 3.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_TagebauGrubeSteinbruch",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 1.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Friedhof",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 8.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_SportFreizeitUndErholungsflaeche",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "41008_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "vegAndPav",
+                "value": 8.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":true,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Weg",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "42006_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 2.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "layername": "AX_Platz",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "42009_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "pav",
+                "value": 4.0,
+                "column": "pavement"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": true
+        },
+        {
+            "layername": "AX_Flugverkehr",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 1.0
+            },
+            "identifyGreen": true,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Schiffsverkehr",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "pavement",
+                "palmValue": 3.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Landwirtschaft",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43001_PALM.csv",
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "veg",
+                "value": 2.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Wald",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43002_PALM.csv",
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "veg",
+                "value": 7.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Gehoelz",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 7.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+		{
+            "layername": "AX_Heide",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 15.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Sumpf",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 14.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_UnlandVegetationsloseFlaeche",
+            "editedLayer": null,
+            "mapOnAttribute": true,
+            "keyTable": "43007_PALM.csv",
+            "mergeKeyOnFunction": true,
+            "replaceNA": {
+                "config": "veg",
+                "value": 8.0,
+                "column": "vegetation"
+            },
+            "palmMapping": null,
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Fliessgewaesser",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 2.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Hafenbecken",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 2.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            
+            "layername": "AX_StehendesGewaesser",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "water",
+                "palmValue": 1.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        },
+        {
+            "layername": "AX_Moor",
+            "editedLayer": null,
+            "mapOnAttribute": false,
+            "keyTable": null,
+            "mergeKeyOnFunction": false,
+            "replaceNA": {
+                "config": "",
+                "value": 0,
+                "column": ""
+            },
+            "palmMapping": {
+                "palmSurfaceType": "vegetation",
+                "palmValue": 14.0
+            },
+            "identifyGreen": false,
+            "identifySealed":false,
+            "overlayRail": false
+        }
     ]
 }

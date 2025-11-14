@@ -228,51 +228,59 @@ imperv_low, imperv_high = vectoriseImperviousness(
     clipper = clipper
 )
 
+# read and clip the ALKIS layer before the loop
+alkis = gpd.read_file(f"{alkis_path}/alkis.gpkg", layer="nutzung")
+
+alkis = alkis.clip(clipper, keep_geom_type=True)
+
+# Fill missing values with a placeholder (e.g., 0)
+alkis["veg"] = alkis["veg"].fillna(0).astype(int)
+
+
 # step 2 loop through dictionary which defines translation and further operations
-for layer in layers["Bochum"]:
+for layer in layers["Berlin"]:
     print(layer["layername"])
-    # read and clip each ALKIS layer
-    layer["clippedLayer"] = readAndClipLayers(
-        filename = layer["filename"],
-        layername = layer["layername"],
-        clipper=clipper
-    )
+    layer["editedLayer"] = alkis[alkis["bezeich"]==layer["layername"]]
 
     # translate to PALM classes either with translation table or as a whole layer
     if layer["mapOnAttribute"]:
         keyTable = readKeyTable(layer["keyTable"])
         if layer["mergeKeyOnFunction"]:
-            layer["clippedLayer"] = layer["clippedLayer"].merge(keyTable, how="left", on="funktion")
+            layer["editedLayer"] = layer["editedLayer"].merge(keyTable, how="left", left_on="fkt", right_on="funktion")
         else:
-            layer["clippedLayer"] = layer["clippedLayer"].merge(keyTable, how="left", on="vegetationsmerkmal")
+            layer["editedLayer"] = layer["editedLayer"].merge(keyTable, how="left", left_on="veg", right_on="vegetationsmerkmal")
         
         # replace NAN values due to missing attributes in ALKIS layer
-        layer["clippedLayer"] = replaceNA(
+        layer["editedLayer"] = replaceNA(
             config = layer["replaceNA"]["config"],
-            layer = layer["clippedLayer"],
+            layer = layer["editedLayer"],
             value = layer["replaceNA"]["value"],
             columnToOverwrite = layer["replaceNA"]["column"]
         )
     else:
-        layer["clippedLayer"][layer["palmMapping"]["palmSurfaceType"]] = layer["palmMapping"]["palmValue"]
+        layer["editedLayer"][layer["palmMapping"]["palmSurfaceType"]] = layer["palmMapping"]["palmValue"]
 
     # identify green areas in sealed classes and change to vegetation
     if layer["identifyGreen"]:
-        layer["clippedLayer"]=identifyGreen(imperv_low,layer["clippedLayer"])
+        # check if layer["clippedLayer"] is empty
+        if layer["editedLayer"].empty:
+            continue
+        else:
+            layer["editedLayer"]=identifyGreen(imperv_low,layer["editedLayer"])
 
     # identify sealed areas in sports and leisure facilities and change to pavement
     if layer["identifySealed"]:
-        layer["clippedLayer"]=identifySealed(imperv_high,layer["clippedLayer"])
-
-# overlay rail with sealed ALKIS data to exclude subways
-overlayRail("Bochum")
+        if layer["editedLayer"].empty:
+            continue
+        else:
+            layer["editedLayer"]=identifySealed(imperv_high,layer["editedLayer"])
 
 # create empty geodataframe for combined ALKIS layers
 alkis_palm_all= gpd.GeoDataFrame()
 
 # combine all ALKIS layers translated to PALM
-for layer in layers["Bochum"]:
-    alkis_palm_all = pd.concat([alkis_palm_all, layer["clippedLayer"]])
+for layer in layers["Berlin"]:
+    alkis_palm_all = pd.concat([alkis_palm_all, layer["editedLayer"]])
 
 # keep only necessary columns
 alkis_palm_all = alkis_palm_all[["pavement","vegetation","water","geometry"]]

@@ -3,7 +3,10 @@ This script is used to translate ALKIS geospatial data to PALM surface types.
 
 ALKIS consists of several individual layers describing the current use of an area. Some of those layers can directly be translated into a PALM surface type. Other layers are translated to PALM surface types based on the attribute "funktion" (function) or "vegetationsmerkmal" (vegetation characteristic). The translation for those layers is conducted with translation tables. As some features have NAN values in their attributes, a PALM surface type is assigned based on the ALKIS layer from which they originate.
 
-As each ALKIS layer has to be handled differently, a dictionary is defined with the file name, layer name within the xml file, whether to translate to whole layer or with a translation table, how NAN values are replaced and refinements to be made. An example dictionary is provided and currently contains the city of Bochum.
+As each ALKIS layer has to be handled differently, a dictionary is defined with the file name, layer name within the xml file, whether to translate to whole layer or with a translation table, how NAN values are replaced and refinements to be made. An example dictionary is provided and currently contains the cities of Bochum, Dortmund, Cologne and Berlin.
+
+# alkis2PALM_gpkg.py
+This script has the same functionality as the above described script. The difference is the data format of the ALKIS dataset. Here the input format is a GeoPackage as is usual when processing ALKIS data in e.g. Berlin.
 
 ## Functionality
 
@@ -55,7 +58,7 @@ In the main execution block, the script:
 
 The script uses the following data:
 
-- ALKIS geospatial data in XML format.
+- ALKIS geospatial data in XML or Geopackage format.
 - A shapefile (clipper) to define the area of interest.
 - An imperviousness raster data.
 - CSV files (translation tables) to map ALKIS attributes to PALM classes.
@@ -75,6 +78,10 @@ To use this script, you need to have GeoPandas, pandas, os, and rasterio librari
 
 ```bash
 python alkis2PALM.py
+```
+or
+```bash
+python alkis2PALM_gpkg.py
 ```
 
 Please note that you may need to adjust the data paths and function arguments to match your data.
