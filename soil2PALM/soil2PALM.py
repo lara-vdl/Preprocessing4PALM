@@ -4,6 +4,7 @@ import os
 import rasterio
 from rasterio.transform import from_origin
 from rasterio.features import rasterize
+import numpy as np
 
 # set data paths
 data_path = "/media/lara/2TB SSD/sciebo/Promotion/01_PALM_Evaluation/dev_geodata/soil/ISBK50"
@@ -11,7 +12,7 @@ keys_path = "/media/lara/2TB SSD/sciebo/Promotion/01_PALM_Evaluation/dev_geodata
 outpath = "/media/lara/2TB SSD/sciebo/Promotion/01_PALM_Evaluation/dev_geodata/soil/processed"
 
 # define functions
-def rasteriseSoil(gdf:gpd.GeoDataFrame,column:str,resolution:float) -> None:
+def rasteriseSoil(gdf:gpd.GeoDataFrame,column:str,resolution:float,replace_na:int) -> None:
     '''
     Rasterises the processed soil dataset with a desired resolution and converts to values to integer
     '''
@@ -39,8 +40,8 @@ def rasteriseSoil(gdf:gpd.GeoDataFrame,column:str,resolution:float) -> None:
         # Rasterize the GeoDataFrame into the new raster
         raster = rasterize(shapes, out_shape=(height, width), transform=transform)
 
-        # 
-        #raster = raster.astype('float32')
+        # change nodata values as no missing values should be present
+        raster[raster == 0] = replace_na
         
         # Write the raster data to the output raster
         dst.write(raster, 1)
@@ -74,4 +75,4 @@ soil_palm.to_file(os.path.join(outpath,"soil_palm.shp"))
 print("saved shapefile")
 
 # rasterise 
-rasteriseSoil(soil_palm,"soil_type",32.0)
+rasteriseSoil(soil_palm,"soil_type",32.0,replace_na=2)
